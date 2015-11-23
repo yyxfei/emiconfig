@@ -1,0 +1,575 @@
+
+# sudoers file for cream.
+#
+# This file contains specific configuration for cream.
+
+# User alias specification (for cream)
+
+
+Runas_Alias GLEXEC_ATLAS = \
+      atlas001, atlas002, atlas003, atlas004, atlas005, \
+      atlas006, atlas007, atlas008, atlas009, atlas010, \
+      atlas011, atlas012, atlas013, atlas014, atlas015, \
+      atlas016, atlas017, atlas018, atlas019, atlas020, \
+      atlas021, atlas022, atlas023, atlas024, atlas025, \
+      atlas026, atlas027, atlas028, atlas029, atlas030, \
+      atlas031, atlas032, atlas033, atlas034, atlas035, \
+      atlas036, atlas037, atlas038, atlas039, atlas040, \
+      atlas041, atlas042, atlas043, atlas044, atlas045, atlas046, atlas047, atlas048, atlas049, atlas050, atlas051, atlas052, atlas053, atlas054, atlas055, atlas056, atlas057, atlas058, atlas059, atlas060, atlas061, atlas062, atlas063, atlas064, atlas065, atlas066, atlas067, atlas068, atlas069, atlas070, atlas071, atlas072, atlas073, atlas074, atlas075, atlas076, atlas077, atlas078, atlas079, atlas080, atlas081, atlas082, atlas083, atlas084, atlas085, atlas086, atlas087, atlas088, atlas089, atlas090, atlas091, atlas092, atlas093, atlas094, atlas095, atlas096, atlas097, atlas098, atlas099, atlas100, atlas101, atlas102, atlas103, atlas104, atlas105, atlas106, atlas107, atlas108, atlas109, atlas110, atlas111, atlas112, atlas113, atlas114, atlas115, atlas116, atlas117, atlas118, atlas119, atlas120, atlas121, atlas122, atlas123, atlas124, atlas125, atlas126, atlas127, atlas128, atlas129, atlas130, atlas131, atlas132, atlas133, atlas134, atlas135, atlas136, atlas137, atlas138, atlas139, atlas140, atlas141, atlas142, atlas143, atlas144, atlas145, atlas146, atlas147, atlas148, atlas149, atlas150, atlas151, atlas152, atlas153, atlas154, atlas155, atlas156, atlas157, atlas158, atlas159, atlas160, atlas161, atlas162, atlas163, atlas164, atlas165, atlas166, atlas167, atlas168, atlas169, atlas170, atlas171, atlas172, atlas173, atlas174, atlas175, atlas176, atlas177, atlas178, atlas179, atlas180, atlas181, atlas182, atlas183, atlas184, atlas185, atlas186, atlas187, atlas188, atlas189, atlas190, atlas191, atlas192, atlas193, atlas194, atlas195, atlas196, atlas197, atlas198, atlas199
+
+Runas_Alias GLEXEC_ATLASPIL = \
+      pilat301, pilat302, pilat303, pilat304, pilat305, \
+      pilat306, pilat307, pilat308, pilat309, pilat310, \
+      pilat311, pilat312, pilat313, pilat314, pilat315, \
+      pilat316, pilat317, pilat318, pilat319, pilat320
+
+Runas_Alias GLEXEC_ATLASPRD = \
+      prdat201, prdat202, prdat203, prdat204, prdat205, \
+      prdat206, prdat207, prdat208, prdat209, prdat210, \
+      prdat211, prdat212, prdat213, prdat214, prdat215, \
+      prdat216, prdat217, prdat218, prdat219, prdat220, \
+      prdat221, prdat222, prdat223, prdat224, prdat225, \
+      prdat226, prdat227, prdat228, prdat229, prdat230, \
+      prdat231, prdat232, prdat233, prdat234, prdat235, \
+      prdat236, prdat237, prdat238, prdat239, prdat240, \
+      prdat241, prdat242, prdat243, prdat244, prdat245, \
+      prdat246, prdat247, prdat248, prdat249, prdat250, \
+      prdat251, prdat252, prdat253, prdat254, prdat255, \
+      prdat256, prdat257, prdat258, prdat259, prdat260, \
+      prdat261, prdat262, prdat263, prdat264, prdat265, \
+      prdat266, prdat267, prdat268, prdat269, prdat270, \
+      prdat271, prdat272, prdat273, prdat274, prdat275, \
+      prdat276, prdat277, prdat278, prdat279, prdat280, \
+      prdat281, prdat282, prdat283, prdat284, prdat285, \
+      prdat286, prdat287, prdat288, prdat289, prdat290, \
+      prdat291, prdat292, prdat293, prdat294, prdat295, \
+      prdat296, prdat297, prdat298, prdat299, prdat300
+
+Runas_Alias GLEXEC_ATLASSGM = \
+      sgmat321, sgmat322, sgmat323, sgmat324, sgmat325, \
+      sgmat326, sgmat327, sgmat328, sgmat329, sgmat330, \
+      sgmat331, sgmat332, sgmat333, sgmat334, sgmat335, \
+      sgmat336, sgmat337, sgmat338, sgmat339, sgmat340, \
+      sgmat341, sgmat342, sgmat343, sgmat344, sgmat345, \
+      sgmat346, sgmat347, sgmat348, sgmat349, sgmat350, \
+      sgmat351, sgmat352, sgmat353, sgmat354, sgmat355, \
+      sgmat356, sgmat357, sgmat358, sgmat359, sgmat360, \
+      sgmat361, sgmat362, sgmat363, sgmat364, sgmat365, \
+      sgmat366, sgmat367, sgmat368, sgmat369, sgmat370, \
+      sgmat371, sgmat372, sgmat373, sgmat374, sgmat375, \
+      sgmat376, sgmat377, sgmat378, sgmat379, sgmat380, \
+      sgmat381, sgmat382, sgmat383, sgmat384, sgmat385, \
+      sgmat386, sgmat387, sgmat388, sgmat389, sgmat390, \
+      sgmat391, sgmat392, sgmat393, sgmat394, sgmat395, \
+      sgmat396, sgmat397, sgmat398, sgmat399, sgmat400
+
+Runas_Alias GLEXEC_BES = \
+      bes001, bes002, bes003, bes004, bes005, \
+      bes006, bes007, bes008, bes009, bes010, \
+      bes011, bes012, bes013, bes014, bes015, \
+      bes016, bes017, bes018, bes019, bes020, \
+      bes021, bes022, bes023, bes024, bes025, \
+      bes026, bes027, bes028, bes029, bes030, \
+      bes031, bes032, bes033, bes034, bes035, \
+      bes036, bes037, bes038, bes039, bes040, \
+      bes041, bes042, bes043, bes044, bes045, bes046, bes047, bes048, bes049, bes050, bes051, bes052, bes053, bes054, bes055, bes056, bes057, bes058, bes059, bes060, bes061, bes062, bes063, bes064, bes065, bes066, bes067, bes068, bes069, bes070, bes071, bes072, bes073, bes074, bes075, bes076, bes077, bes078, bes079, bes080, bes081, bes082, bes083, bes084, bes085, bes086, bes087, bes088, bes089, bes090, bes091, bes092, bes093, bes094, bes095, bes096, bes097, bes098, bes099, bes100, bes101, bes102, bes103, bes104, bes105, bes106, bes107, bes108, bes109, bes110, bes111, bes112, bes113, bes114, bes115, bes116, bes117, bes118, bes119, bes120, bes121, bes122, bes123, bes124, bes125, bes126, bes127, bes128, bes129, bes130, bes131, bes132, bes133, bes134, bes135, bes136, bes137, bes138, bes139, bes140, bes141, bes142, bes143, bes144, bes145, bes146, bes147, bes148, bes149, bes150, bes151, bes152, bes153, bes154, bes155, bes156, bes157, bes158, bes159, bes160, bes161, bes162, bes163, bes164, bes165, bes166, bes167, bes168, bes169, bes170, bes171, bes172, bes173, bes174, bes175, bes176, bes177, bes178, bes179, bes180, bes181, bes182, bes183, bes184, bes185, bes186, bes187, bes188, bes189, bes190, bes191, bes192, bes193, bes194, bes195, bes196, bes197, bes198, bes199
+
+Runas_Alias GLEXEC_BESPIL = \
+      pilbes301, pilbes302, pilbes303, pilbes304, pilbes305, \
+      pilbes306, pilbes307, pilbes308, pilbes309, pilbes310, \
+      pilbes311, pilbes312, pilbes313, pilbes314, pilbes315, \
+      pilbes316, pilbes317, pilbes318, pilbes319, pilbes320
+
+Runas_Alias GLEXEC_BESPRD = \
+      prdbes201, prdbes202, prdbes203, prdbes204, prdbes205, \
+      prdbes206, prdbes207, prdbes208, prdbes209, prdbes210, \
+      prdbes211, prdbes212, prdbes213, prdbes214, prdbes215, \
+      prdbes216, prdbes217, prdbes218, prdbes219, prdbes220, \
+      prdbes221, prdbes222, prdbes223, prdbes224, prdbes225, \
+      prdbes226, prdbes227, prdbes228, prdbes229, prdbes230, \
+      prdbes231, prdbes232, prdbes233, prdbes234, prdbes235, \
+      prdbes236, prdbes237, prdbes238, prdbes239, prdbes240, \
+      prdbes241, prdbes242, prdbes243, prdbes244, prdbes245, \
+      prdbes246, prdbes247, prdbes248, prdbes249, prdbes250, \
+      prdbes251, prdbes252, prdbes253, prdbes254, prdbes255, \
+      prdbes256, prdbes257, prdbes258, prdbes259, prdbes260, \
+      prdbes261, prdbes262, prdbes263, prdbes264, prdbes265, \
+      prdbes266, prdbes267, prdbes268, prdbes269, prdbes270, \
+      prdbes271, prdbes272, prdbes273, prdbes274, prdbes275, \
+      prdbes276, prdbes277, prdbes278, prdbes279, prdbes280, \
+      prdbes281, prdbes282, prdbes283, prdbes284, prdbes285, \
+      prdbes286, prdbes287, prdbes288, prdbes289, prdbes290, \
+      prdbes291, prdbes292, prdbes293, prdbes294, prdbes295, \
+      prdbes296, prdbes297, prdbes298, prdbes299, prdbes300
+
+Runas_Alias GLEXEC_BESSGM = \
+      sgmbes321, sgmbes322, sgmbes323, sgmbes324, sgmbes325, \
+      sgmbes326, sgmbes327, sgmbes328, sgmbes329, sgmbes330, \
+      sgmbes331, sgmbes332, sgmbes333, sgmbes334, sgmbes335, \
+      sgmbes336, sgmbes337, sgmbes338, sgmbes339, sgmbes340, \
+      sgmbes341, sgmbes342, sgmbes343, sgmbes344, sgmbes345, \
+      sgmbes346, sgmbes347, sgmbes348, sgmbes349, sgmbes350, \
+      sgmbes351, sgmbes352, sgmbes353, sgmbes354, sgmbes355, \
+      sgmbes356, sgmbes357, sgmbes358, sgmbes359, sgmbes360, \
+      sgmbes361, sgmbes362, sgmbes363, sgmbes364, sgmbes365, \
+      sgmbes366, sgmbes367, sgmbes368, sgmbes369, sgmbes370, \
+      sgmbes371, sgmbes372, sgmbes373, sgmbes374, sgmbes375, \
+      sgmbes376, sgmbes377, sgmbes378, sgmbes379, sgmbes380, \
+      sgmbes381, sgmbes382, sgmbes383, sgmbes384, sgmbes385, \
+      sgmbes386, sgmbes387, sgmbes388, sgmbes389, sgmbes390, \
+      sgmbes391, sgmbes392, sgmbes393, sgmbes394, sgmbes395, \
+      sgmbes396, sgmbes397, sgmbes398, sgmbes399, sgmbes400
+
+Runas_Alias GLEXEC_BIOMED = \
+      bio001, bio002, bio003, bio004, bio005, \
+      bio006, bio007, bio008, bio009, bio010, \
+      bio011, bio012, bio013, bio014, bio015, \
+      bio016, bio017, bio018, bio019, bio020, \
+      bio021, bio022, bio023, bio024, bio025, \
+      bio026, bio027, bio028, bio029, bio030, \
+      bio031, bio032, bio033, bio034, bio035, \
+      bio036, bio037, bio038, bio039, bio040, \
+      bio041, bio042, bio043, bio044, bio045, bio046, bio047, bio048, bio049, bio050, bio051, bio052, bio053, bio054, bio055, bio056, bio057, bio058, bio059, bio060, bio061, bio062, bio063, bio064, bio065, bio066, bio067, bio068, bio069, bio070, bio071, bio072, bio073, bio074, bio075, bio076, bio077, bio078, bio079, bio080, bio081, bio082, bio083, bio084, bio085, bio086, bio087, bio088, bio089, bio090, bio091, bio092, bio093, bio094, bio095, bio096, bio097, bio098, bio099, bio100, bio101, bio102, bio103, bio104, bio105, bio106, bio107, bio108, bio109, bio110, bio111, bio112, bio113, bio114, bio115, bio116, bio117, bio118, bio119, bio120, bio121, bio122, bio123, bio124, bio125, bio126, bio127, bio128, bio129, bio130, bio131, bio132, bio133, bio134, bio135, bio136, bio137, bio138, bio139, bio140, bio141, bio142, bio143, bio144, bio145, bio146, bio147, bio148, bio149, bio150, bio151, bio152, bio153, bio154, bio155, bio156, bio157, bio158, bio159, bio160, bio161, bio162, bio163, bio164, bio165, bio166, bio167, bio168, bio169, bio170, bio171, bio172, bio173, bio174, bio175, bio176, bio177, bio178, bio179, bio180, bio181, bio182, bio183, bio184, bio185, bio186, bio187, bio188, bio189, bio190, bio191, bio192, bio193, bio194, bio195, bio196, bio197, bio198, bio199
+
+Runas_Alias GLEXEC_BIOPIL = \
+      pilbio301, pilbio302, pilbio303, pilbio304, pilbio305, \
+      pilbio306, pilbio307, pilbio308, pilbio309, pilbio310, \
+      pilbio311, pilbio312, pilbio313, pilbio314, pilbio315, \
+      pilbio316, pilbio317, pilbio318, pilbio319, pilbio320
+
+Runas_Alias GLEXEC_BIOPRD = \
+      prdbio201, prdbio202, prdbio203, prdbio204, prdbio205, \
+      prdbio206, prdbio207, prdbio208, prdbio209, prdbio210, \
+      prdbio211, prdbio212, prdbio213, prdbio214, prdbio215, \
+      prdbio216, prdbio217, prdbio218, prdbio219, prdbio220, \
+      prdbio221, prdbio222, prdbio223, prdbio224, prdbio225, \
+      prdbio226, prdbio227, prdbio228, prdbio229, prdbio230, \
+      prdbio231, prdbio232, prdbio233, prdbio234, prdbio235, \
+      prdbio236, prdbio237, prdbio238, prdbio239, prdbio240, \
+      prdbio241, prdbio242, prdbio243, prdbio244, prdbio245, \
+      prdbio246, prdbio247, prdbio248, prdbio249, prdbio250, \
+      prdbio251, prdbio252, prdbio253, prdbio254, prdbio255, \
+      prdbio256, prdbio257, prdbio258, prdbio259, prdbio260, \
+      prdbio261, prdbio262, prdbio263, prdbio264, prdbio265, \
+      prdbio266, prdbio267, prdbio268, prdbio269, prdbio270, \
+      prdbio271, prdbio272, prdbio273, prdbio274, prdbio275, \
+      prdbio276, prdbio277, prdbio278, prdbio279, prdbio280, \
+      prdbio281, prdbio282, prdbio283, prdbio284, prdbio285, \
+      prdbio286, prdbio287, prdbio288, prdbio289, prdbio290, \
+      prdbio291, prdbio292, prdbio293, prdbio294, prdbio295, \
+      prdbio296, prdbio297, prdbio298, prdbio299, prdbio300
+
+Runas_Alias GLEXEC_BIOSGM = \
+      sgmbio321, sgmbio322, sgmbio323, sgmbio324, sgmbio325, \
+      sgmbio326, sgmbio327, sgmbio328, sgmbio329, sgmbio330, \
+      sgmbio331, sgmbio332, sgmbio333, sgmbio334, sgmbio335, \
+      sgmbio336, sgmbio337, sgmbio338, sgmbio339, sgmbio340, \
+      sgmbio341, sgmbio342, sgmbio343, sgmbio344, sgmbio345, \
+      sgmbio346, sgmbio347, sgmbio348, sgmbio349, sgmbio350, \
+      sgmbio351, sgmbio352, sgmbio353, sgmbio354, sgmbio355, \
+      sgmbio356, sgmbio357, sgmbio358, sgmbio359, sgmbio360, \
+      sgmbio361, sgmbio362, sgmbio363, sgmbio364, sgmbio365, \
+      sgmbio366, sgmbio367, sgmbio368, sgmbio369, sgmbio370, \
+      sgmbio371, sgmbio372, sgmbio373, sgmbio374, sgmbio375, \
+      sgmbio376, sgmbio377, sgmbio378, sgmbio379, sgmbio380, \
+      sgmbio381, sgmbio382, sgmbio383, sgmbio384, sgmbio385, \
+      sgmbio386, sgmbio387, sgmbio388, sgmbio389, sgmbio390, \
+      sgmbio391, sgmbio392, sgmbio393, sgmbio394, sgmbio395, \
+      sgmbio396, sgmbio397, sgmbio398, sgmbio399, sgmbio400
+
+Runas_Alias GLEXEC_CMS = \
+      cms001, cms002, cms003, cms004, cms005, \
+      cms006, cms007, cms008, cms009, cms010, \
+      cms011, cms012, cms013, cms014, cms015, \
+      cms016, cms017, cms018, cms019, cms020, \
+      cms021, cms022, cms023, cms024, cms025, \
+      cms026, cms027, cms028, cms029, cms030, \
+      cms031, cms032, cms033, cms034, cms035, \
+      cms036, cms037, cms038, cms039, cms040, \
+      cms041, cms042, cms043, cms044, cms045, cms046, cms047, cms048, cms049, cms050, cms051, cms052, cms053, cms054, cms055, cms056, cms057, cms058, cms059, cms060, cms061, cms062, cms063, cms064, cms065, cms066, cms067, cms068, cms069, cms070, cms071, cms072, cms073, cms074, cms075, cms076, cms077, cms078, cms079, cms080, cms081, cms082, cms083, cms084, cms085, cms086, cms087, cms088, cms089, cms090, cms091, cms092, cms093, cms094, cms095, cms096, cms097, cms098, cms099, cms100, cms101, cms102, cms103, cms104, cms105, cms106, cms107, cms108, cms109, cms110, cms111, cms112, cms113, cms114, cms115, cms116, cms117, cms118, cms119, cms120, cms121, cms122, cms123, cms124, cms125, cms126, cms127, cms128, cms129, cms130, cms131, cms132, cms133, cms134, cms135, cms136, cms137, cms138, cms139, cms140, cms141, cms142, cms143, cms144, cms145, cms146, cms147, cms148, cms149, cms150, cms151, cms152, cms153, cms154, cms155, cms156, cms157, cms158, cms159, cms160, cms161, cms162, cms163, cms164, cms165, cms166, cms167, cms168, cms169, cms170, cms171, cms172, cms173, cms174, cms175, cms176, cms177, cms178, cms179, cms180, cms181, cms182, cms183, cms184, cms185, cms186, cms187, cms188, cms189, cms190, cms191, cms192, cms193, cms194, cms195, cms196, cms197, cms198, cms199
+
+Runas_Alias GLEXEC_CMSPIL = \
+      pilcms301, pilcms302, pilcms303, pilcms304, pilcms305, \
+      pilcms306, pilcms307, pilcms308, pilcms309, pilcms310, \
+      pilcms311, pilcms312, pilcms313, pilcms314, pilcms315, \
+      pilcms316, pilcms317, pilcms318, pilcms319, pilcms320
+
+Runas_Alias GLEXEC_CMSPRD = \
+      prdcms201, prdcms202, prdcms203, prdcms204, prdcms205, \
+      prdcms206, prdcms207, prdcms208, prdcms209, prdcms210, \
+      prdcms211, prdcms212, prdcms213, prdcms214, prdcms215, \
+      prdcms216, prdcms217, prdcms218, prdcms219, prdcms220, \
+      prdcms221, prdcms222, prdcms223, prdcms224, prdcms225, \
+      prdcms226, prdcms227, prdcms228, prdcms229, prdcms230, \
+      prdcms231, prdcms232, prdcms233, prdcms234, prdcms235, \
+      prdcms236, prdcms237, prdcms238, prdcms239, prdcms240, \
+      prdcms241, prdcms242, prdcms243, prdcms244, prdcms245, \
+      prdcms246, prdcms247, prdcms248, prdcms249, prdcms250, \
+      prdcms251, prdcms252, prdcms253, prdcms254, prdcms255, \
+      prdcms256, prdcms257, prdcms258, prdcms259, prdcms260, \
+      prdcms261, prdcms262, prdcms263, prdcms264, prdcms265, \
+      prdcms266, prdcms267, prdcms268, prdcms269, prdcms270, \
+      prdcms271, prdcms272, prdcms273, prdcms274, prdcms275, \
+      prdcms276, prdcms277, prdcms278, prdcms279, prdcms280, \
+      prdcms281, prdcms282, prdcms283, prdcms284, prdcms285, \
+      prdcms286, prdcms287, prdcms288, prdcms289, prdcms290, \
+      prdcms291, prdcms292, prdcms293, prdcms294, prdcms295, \
+      prdcms296, prdcms297, prdcms298, prdcms299, prdcms300
+
+Runas_Alias GLEXEC_CMSSGM = \
+      sgmcms321, sgmcms322, sgmcms323, sgmcms324, sgmcms325, \
+      sgmcms326, sgmcms327, sgmcms328, sgmcms329, sgmcms330, \
+      sgmcms331, sgmcms332, sgmcms333, sgmcms334, sgmcms335, \
+      sgmcms336, sgmcms337, sgmcms338, sgmcms339, sgmcms340, \
+      sgmcms341, sgmcms342, sgmcms343, sgmcms344, sgmcms345, \
+      sgmcms346, sgmcms347, sgmcms348, sgmcms349, sgmcms350, \
+      sgmcms351, sgmcms352, sgmcms353, sgmcms354, sgmcms355, \
+      sgmcms356, sgmcms357, sgmcms358, sgmcms359, sgmcms360, \
+      sgmcms361, sgmcms362, sgmcms363, sgmcms364, sgmcms365, \
+      sgmcms366, sgmcms367, sgmcms368, sgmcms369, sgmcms370, \
+      sgmcms371, sgmcms372, sgmcms373, sgmcms374, sgmcms375, \
+      sgmcms376, sgmcms377, sgmcms378, sgmcms379, sgmcms380, \
+      sgmcms381, sgmcms382, sgmcms383, sgmcms384, sgmcms385, \
+      sgmcms386, sgmcms387, sgmcms388, sgmcms389, sgmcms390, \
+      sgmcms391, sgmcms392, sgmcms393, sgmcms394, sgmcms395, \
+      sgmcms396, sgmcms397, sgmcms398, sgmcms399, sgmcms400
+
+Runas_Alias GLEXEC_DTEAM = \
+      dteam001, dteam002, dteam003, dteam004, dteam005, \
+      dteam006, dteam007, dteam008, dteam009, dteam010, \
+      dteam011, dteam012, dteam013, dteam014, dteam015, \
+      dteam016, dteam017, dteam018, dteam019, dteam020, \
+      dteam021, dteam022, dteam023, dteam024, dteam025, \
+      dteam026, dteam027, dteam028, dteam029, dteam030, \
+      dteam031, dteam032, dteam033, dteam034, dteam035, \
+      dteam036, dteam037, dteam038, dteam039, dteam040, \
+      dteam041, dteam042, dteam043, dteam044, dteam045, dteam046, dteam047, dteam048, dteam049, dteam050, dteam051, dteam052, dteam053, dteam054, dteam055, dteam056, dteam057, dteam058, dteam059, dteam060, dteam061, dteam062, dteam063, dteam064, dteam065, dteam066, dteam067, dteam068, dteam069, dteam070, dteam071, dteam072, dteam073, dteam074, dteam075, dteam076, dteam077, dteam078, dteam079, dteam080, dteam081, dteam082, dteam083, dteam084, dteam085, dteam086, dteam087, dteam088, dteam089, dteam090, dteam091, dteam092, dteam093, dteam094, dteam095, dteam096, dteam097, dteam098, dteam099, dteam100, dteam101, dteam102, dteam103, dteam104, dteam105, dteam106, dteam107, dteam108, dteam109, dteam110, dteam111, dteam112, dteam113, dteam114, dteam115, dteam116, dteam117, dteam118, dteam119, dteam120, dteam121, dteam122, dteam123, dteam124, dteam125, dteam126, dteam127, dteam128, dteam129, dteam130, dteam131, dteam132, dteam133, dteam134, dteam135, dteam136, dteam137, dteam138, dteam139, dteam140, dteam141, dteam142, dteam143, dteam144, dteam145, dteam146, dteam147, dteam148, dteam149, dteam150, dteam151, dteam152, dteam153, dteam154, dteam155, dteam156, dteam157, dteam158, dteam159, dteam160, dteam161, dteam162, dteam163, dteam164, dteam165, dteam166, dteam167, dteam168, dteam169, dteam170, dteam171, dteam172, dteam173, dteam174, dteam175, dteam176, dteam177, dteam178, dteam179, dteam180, dteam181, dteam182, dteam183, dteam184, dteam185, dteam186, dteam187, dteam188, dteam189, dteam190, dteam191, dteam192, dteam193, dteam194, dteam195, dteam196, dteam197, dteam198, dteam199
+
+Runas_Alias GLEXEC_DTEAMPIL = \
+      pildtm301, pildtm302, pildtm303, pildtm304, pildtm305, \
+      pildtm306, pildtm307, pildtm308, pildtm309, pildtm310, \
+      pildtm311, pildtm312, pildtm313, pildtm314, pildtm315, \
+      pildtm316, pildtm317, pildtm318, pildtm319, pildtm320
+
+Runas_Alias GLEXEC_DTEAMPRD = \
+      prddtm201, prddtm202, prddtm203, prddtm204, prddtm205, \
+      prddtm206, prddtm207, prddtm208, prddtm209, prddtm210, \
+      prddtm211, prddtm212, prddtm213, prddtm214, prddtm215, \
+      prddtm216, prddtm217, prddtm218, prddtm219, prddtm220, \
+      prddtm221, prddtm222, prddtm223, prddtm224, prddtm225, \
+      prddtm226, prddtm227, prddtm228, prddtm229, prddtm230, \
+      prddtm231, prddtm232, prddtm233, prddtm234, prddtm235, \
+      prddtm236, prddtm237, prddtm238, prddtm239, prddtm240, \
+      prddtm241, prddtm242, prddtm243, prddtm244, prddtm245, \
+      prddtm246, prddtm247, prddtm248, prddtm249, prddtm250, \
+      prddtm251, prddtm252, prddtm253, prddtm254, prddtm255, \
+      prddtm256, prddtm257, prddtm258, prddtm259, prddtm260, \
+      prddtm261, prddtm262, prddtm263, prddtm264, prddtm265, \
+      prddtm266, prddtm267, prddtm268, prddtm269, prddtm270, \
+      prddtm271, prddtm272, prddtm273, prddtm274, prddtm275, \
+      prddtm276, prddtm277, prddtm278, prddtm279, prddtm280, \
+      prddtm281, prddtm282, prddtm283, prddtm284, prddtm285, \
+      prddtm286, prddtm287, prddtm288, prddtm289, prddtm290, \
+      prddtm291, prddtm292, prddtm293, prddtm294, prddtm295, \
+      prddtm296, prddtm297, prddtm298, prddtm299, prddtm300
+
+Runas_Alias GLEXEC_DTEAMSGM = \
+      sgmdtm321, sgmdtm322, sgmdtm323, sgmdtm324, sgmdtm325, \
+      sgmdtm326, sgmdtm327, sgmdtm328, sgmdtm329, sgmdtm330, \
+      sgmdtm331, sgmdtm332, sgmdtm333, sgmdtm334, sgmdtm335, \
+      sgmdtm336, sgmdtm337, sgmdtm338, sgmdtm339, sgmdtm340, \
+      sgmdtm341, sgmdtm342, sgmdtm343, sgmdtm344, sgmdtm345, \
+      sgmdtm346, sgmdtm347, sgmdtm348, sgmdtm349, sgmdtm350, \
+      sgmdtm351, sgmdtm352, sgmdtm353, sgmdtm354, sgmdtm355, \
+      sgmdtm356, sgmdtm357, sgmdtm358, sgmdtm359, sgmdtm360, \
+      sgmdtm361, sgmdtm362, sgmdtm363, sgmdtm364, sgmdtm365, \
+      sgmdtm366, sgmdtm367, sgmdtm368, sgmdtm369, sgmdtm370, \
+      sgmdtm371, sgmdtm372, sgmdtm373, sgmdtm374, sgmdtm375, \
+      sgmdtm376, sgmdtm377, sgmdtm378, sgmdtm379, sgmdtm380, \
+      sgmdtm381, sgmdtm382, sgmdtm383, sgmdtm384, sgmdtm385, \
+      sgmdtm386, sgmdtm387, sgmdtm388, sgmdtm389, sgmdtm390, \
+      sgmdtm391, sgmdtm392, sgmdtm393, sgmdtm394, sgmdtm395, \
+      sgmdtm396, sgmdtm397, sgmdtm398, sgmdtm399, sgmdtm400
+
+Runas_Alias GLEXEC_ENMR_EU = \
+      enmr001, enmr002, enmr003, enmr004, enmr005, \
+      enmr006, enmr007, enmr008, enmr009, enmr010, \
+      enmr011, enmr012, enmr013, enmr014, enmr015, \
+      enmr016, enmr017, enmr018, enmr019, enmr020, \
+      enmr021, enmr022, enmr023, enmr024, enmr025, \
+      enmr026, enmr027, enmr028, enmr029, enmr030, \
+      enmr031, enmr032, enmr033, enmr034, enmr035, \
+      enmr036, enmr037, enmr038, enmr039, enmr040, \
+      enmr041, enmr042, enmr043, enmr044, enmr045, enmr046, enmr047, enmr048, enmr049, enmr050, enmr051, enmr052, enmr053, enmr054, enmr055, enmr056, enmr057, enmr058, enmr059, enmr060, enmr061, enmr062, enmr063, enmr064, enmr065, enmr066, enmr067, enmr068, enmr069, enmr070, enmr071, enmr072, enmr073, enmr074, enmr075, enmr076, enmr077, enmr078, enmr079, enmr080, enmr081, enmr082, enmr083, enmr084, enmr085, enmr086, enmr087, enmr088, enmr089, enmr090, enmr091, enmr092, enmr093, enmr094, enmr095, enmr096, enmr097, enmr098, enmr099, enmr100, enmr101, enmr102, enmr103, enmr104, enmr105, enmr106, enmr107, enmr108, enmr109, enmr110, enmr111, enmr112, enmr113, enmr114, enmr115, enmr116, enmr117, enmr118, enmr119, enmr120, enmr121, enmr122, enmr123, enmr124, enmr125, enmr126, enmr127, enmr128, enmr129, enmr130, enmr131, enmr132, enmr133, enmr134, enmr135, enmr136, enmr137, enmr138, enmr139, enmr140, enmr141, enmr142, enmr143, enmr144, enmr145, enmr146, enmr147, enmr148, enmr149, enmr150, enmr151, enmr152, enmr153, enmr154, enmr155, enmr156, enmr157, enmr158, enmr159, enmr160, enmr161, enmr162, enmr163, enmr164, enmr165, enmr166, enmr167, enmr168, enmr169, enmr170, enmr171, enmr172, enmr173, enmr174, enmr175, enmr176, enmr177, enmr178, enmr179, enmr180, enmr181, enmr182, enmr183, enmr184, enmr185, enmr186, enmr187, enmr188, enmr189, enmr190, enmr191, enmr192, enmr193, enmr194, enmr195, enmr196, enmr197, enmr198, enmr199
+
+Runas_Alias GLEXEC_ENMRPIL = \
+      pilenmr301, pilenmr302, pilenmr303, pilenmr304, pilenmr305, \
+      pilenmr306, pilenmr307, pilenmr308, pilenmr309, pilenmr310, \
+      pilenmr311, pilenmr312, pilenmr313, pilenmr314, pilenmr315, \
+      pilenmr316, pilenmr317, pilenmr318, pilenmr319, pilenmr320
+
+Runas_Alias GLEXEC_ENMRPRD = \
+      prdenmr201, prdenmr202, prdenmr203, prdenmr204, prdenmr205, \
+      prdenmr206, prdenmr207, prdenmr208, prdenmr209, prdenmr210, \
+      prdenmr211, prdenmr212, prdenmr213, prdenmr214, prdenmr215, \
+      prdenmr216, prdenmr217, prdenmr218, prdenmr219, prdenmr220, \
+      prdenmr221, prdenmr222, prdenmr223, prdenmr224, prdenmr225, \
+      prdenmr226, prdenmr227, prdenmr228, prdenmr229, prdenmr230, \
+      prdenmr231, prdenmr232, prdenmr233, prdenmr234, prdenmr235, \
+      prdenmr236, prdenmr237, prdenmr238, prdenmr239, prdenmr240, \
+      prdenmr241, prdenmr242, prdenmr243, prdenmr244, prdenmr245, \
+      prdenmr246, prdenmr247, prdenmr248, prdenmr249, prdenmr250, \
+      prdenmr251, prdenmr252, prdenmr253, prdenmr254, prdenmr255, \
+      prdenmr256, prdenmr257, prdenmr258, prdenmr259, prdenmr260, \
+      prdenmr261, prdenmr262, prdenmr263, prdenmr264, prdenmr265, \
+      prdenmr266, prdenmr267, prdenmr268, prdenmr269, prdenmr270, \
+      prdenmr271, prdenmr272, prdenmr273, prdenmr274, prdenmr275, \
+      prdenmr276, prdenmr277, prdenmr278, prdenmr279, prdenmr280, \
+      prdenmr281, prdenmr282, prdenmr283, prdenmr284, prdenmr285, \
+      prdenmr286, prdenmr287, prdenmr288, prdenmr289, prdenmr290, \
+      prdenmr291, prdenmr292, prdenmr293, prdenmr294, prdenmr295, \
+      prdenmr296, prdenmr297, prdenmr298, prdenmr299, prdenmr300
+
+Runas_Alias GLEXEC_ENMRSGM = \
+      sgmenmr321, sgmenmr322, sgmenmr323, sgmenmr324, sgmenmr325, \
+      sgmenmr326, sgmenmr327, sgmenmr328, sgmenmr329, sgmenmr330, \
+      sgmenmr331, sgmenmr332, sgmenmr333, sgmenmr334, sgmenmr335, \
+      sgmenmr336, sgmenmr337, sgmenmr338, sgmenmr339, sgmenmr340, \
+      sgmenmr341, sgmenmr342, sgmenmr343, sgmenmr344, sgmenmr345, \
+      sgmenmr346, sgmenmr347, sgmenmr348, sgmenmr349, sgmenmr350, \
+      sgmenmr351, sgmenmr352, sgmenmr353, sgmenmr354, sgmenmr355, \
+      sgmenmr356, sgmenmr357, sgmenmr358, sgmenmr359, sgmenmr360, \
+      sgmenmr361, sgmenmr362, sgmenmr363, sgmenmr364, sgmenmr365, \
+      sgmenmr366, sgmenmr367, sgmenmr368, sgmenmr369, sgmenmr370, \
+      sgmenmr371, sgmenmr372, sgmenmr373, sgmenmr374, sgmenmr375, \
+      sgmenmr376, sgmenmr377, sgmenmr378, sgmenmr379, sgmenmr380, \
+      sgmenmr381, sgmenmr382, sgmenmr383, sgmenmr384, sgmenmr385, \
+      sgmenmr386, sgmenmr387, sgmenmr388, sgmenmr389, sgmenmr390, \
+      sgmenmr391, sgmenmr392, sgmenmr393, sgmenmr394, sgmenmr395, \
+      sgmenmr396, sgmenmr397, sgmenmr398, sgmenmr399, sgmenmr400
+
+Runas_Alias GLEXEC_ESR = \
+      esr001, esr002, esr003, esr004, esr005, \
+      esr006, esr007, esr008, esr009, esr010, \
+      esr011, esr012, esr013, esr014, esr015, \
+      esr016, esr017, esr018, esr019, esr020, \
+      esr021, esr022, esr023, esr024, esr025, \
+      esr026, esr027, esr028, esr029, esr030, \
+      esr031, esr032, esr033, esr034, esr035, \
+      esr036, esr037, esr038, esr039, esr040, \
+      esr041, esr042, esr043, esr044, esr045, esr046, esr047, esr048, esr049, esr050, esr051, esr052, esr053, esr054, esr055, esr056, esr057, esr058, esr059, esr060, esr061, esr062, esr063, esr064, esr065, esr066, esr067, esr068, esr069, esr070, esr071, esr072, esr073, esr074, esr075, esr076, esr077, esr078, esr079, esr080, esr081, esr082, esr083, esr084, esr085, esr086, esr087, esr088, esr089, esr090, esr091, esr092, esr093, esr094, esr095, esr096, esr097, esr098, esr099, esr100, esr101, esr102, esr103, esr104, esr105, esr106, esr107, esr108, esr109, esr110, esr111, esr112, esr113, esr114, esr115, esr116, esr117, esr118, esr119, esr120, esr121, esr122, esr123, esr124, esr125, esr126, esr127, esr128, esr129, esr130, esr131, esr132, esr133, esr134, esr135, esr136, esr137, esr138, esr139, esr140, esr141, esr142, esr143, esr144, esr145, esr146, esr147, esr148, esr149, esr150, esr151, esr152, esr153, esr154, esr155, esr156, esr157, esr158, esr159, esr160, esr161, esr162, esr163, esr164, esr165, esr166, esr167, esr168, esr169, esr170, esr171, esr172, esr173, esr174, esr175, esr176, esr177, esr178, esr179, esr180, esr181, esr182, esr183, esr184, esr185, esr186, esr187, esr188, esr189, esr190, esr191, esr192, esr193, esr194, esr195, esr196, esr197, esr198, esr199
+
+Runas_Alias GLEXEC_ESRPIL = \
+      pilesr301, pilesr302, pilesr303, pilesr304, pilesr305, \
+      pilesr306, pilesr307, pilesr308, pilesr309, pilesr310, \
+      pilesr311, pilesr312, pilesr313, pilesr314, pilesr315, \
+      pilesr316, pilesr317, pilesr318, pilesr319, pilesr320
+
+Runas_Alias GLEXEC_ESRPRD = \
+      prdesr201, prdesr202, prdesr203, prdesr204, prdesr205, \
+      prdesr206, prdesr207, prdesr208, prdesr209, prdesr210, \
+      prdesr211, prdesr212, prdesr213, prdesr214, prdesr215, \
+      prdesr216, prdesr217, prdesr218, prdesr219, prdesr220, \
+      prdesr221, prdesr222, prdesr223, prdesr224, prdesr225, \
+      prdesr226, prdesr227, prdesr228, prdesr229, prdesr230, \
+      prdesr231, prdesr232, prdesr233, prdesr234, prdesr235, \
+      prdesr236, prdesr237, prdesr238, prdesr239, prdesr240, \
+      prdesr241, prdesr242, prdesr243, prdesr244, prdesr245, \
+      prdesr246, prdesr247, prdesr248, prdesr249, prdesr250, \
+      prdesr251, prdesr252, prdesr253, prdesr254, prdesr255, \
+      prdesr256, prdesr257, prdesr258, prdesr259, prdesr260, \
+      prdesr261, prdesr262, prdesr263, prdesr264, prdesr265, \
+      prdesr266, prdesr267, prdesr268, prdesr269, prdesr270, \
+      prdesr271, prdesr272, prdesr273, prdesr274, prdesr275, \
+      prdesr276, prdesr277, prdesr278, prdesr279, prdesr280, \
+      prdesr281, prdesr282, prdesr283, prdesr284, prdesr285, \
+      prdesr286, prdesr287, prdesr288, prdesr289, prdesr290, \
+      prdesr291, prdesr292, prdesr293, prdesr294, prdesr295, \
+      prdesr296, prdesr297, prdesr298, prdesr299, prdesr300
+
+Runas_Alias GLEXEC_ESRSGM = \
+      sgmesr321, sgmesr322, sgmesr323, sgmesr324, sgmesr325, \
+      sgmesr326, sgmesr327, sgmesr328, sgmesr329, sgmesr330, \
+      sgmesr331, sgmesr332, sgmesr333, sgmesr334, sgmesr335, \
+      sgmesr336, sgmesr337, sgmesr338, sgmesr339, sgmesr340, \
+      sgmesr341, sgmesr342, sgmesr343, sgmesr344, sgmesr345, \
+      sgmesr346, sgmesr347, sgmesr348, sgmesr349, sgmesr350, \
+      sgmesr351, sgmesr352, sgmesr353, sgmesr354, sgmesr355, \
+      sgmesr356, sgmesr357, sgmesr358, sgmesr359, sgmesr360, \
+      sgmesr361, sgmesr362, sgmesr363, sgmesr364, sgmesr365, \
+      sgmesr366, sgmesr367, sgmesr368, sgmesr369, sgmesr370, \
+      sgmesr371, sgmesr372, sgmesr373, sgmesr374, sgmesr375, \
+      sgmesr376, sgmesr377, sgmesr378, sgmesr379, sgmesr380, \
+      sgmesr381, sgmesr382, sgmesr383, sgmesr384, sgmesr385, \
+      sgmesr386, sgmesr387, sgmesr388, sgmesr389, sgmesr390, \
+      sgmesr391, sgmesr392, sgmesr393, sgmesr394, sgmesr395, \
+      sgmesr396, sgmesr397, sgmesr398, sgmesr399, sgmesr400
+
+Runas_Alias GLEXEC_OPS = \
+      ops001, ops002, ops003, ops004, ops005, \
+      ops006, ops007, ops008, ops009, ops010, \
+      ops011, ops012, ops013, ops014, ops015, \
+      ops016, ops017, ops018, ops019, ops020, \
+      ops021, ops022, ops023, ops024, ops025, \
+      ops026, ops027, ops028, ops029, ops030, \
+      ops031, ops032, ops033, ops034, ops035, \
+      ops036, ops037, ops038, ops039, ops040, \
+      ops041, ops042, ops043, ops044, ops045, ops046, ops047, ops048, ops049, ops050, ops051, ops052, ops053, ops054, ops055, ops056, ops057, ops058, ops059, ops060, ops061, ops062, ops063, ops064, ops065, ops066, ops067, ops068, ops069, ops070, ops071, ops072, ops073, ops074, ops075, ops076, ops077, ops078, ops079, ops080, ops081, ops082, ops083, ops084, ops085, ops086, ops087, ops088, ops089, ops090, ops091, ops092, ops093, ops094, ops095, ops096, ops097, ops098, ops099, ops100, ops101, ops102, ops103, ops104, ops105, ops106, ops107, ops108, ops109, ops110, ops111, ops112, ops113, ops114, ops115, ops116, ops117, ops118, ops119, ops120, ops121, ops122, ops123, ops124, ops125, ops126, ops127, ops128, ops129, ops130, ops131, ops132, ops133, ops134, ops135, ops136, ops137, ops138, ops139, ops140, ops141, ops142, ops143, ops144, ops145, ops146, ops147, ops148, ops149, ops150, ops151, ops152, ops153, ops154, ops155, ops156, ops157, ops158, ops159, ops160, ops161, ops162, ops163, ops164, ops165, ops166, ops167, ops168, ops169, ops170, ops171, ops172, ops173, ops174, ops175, ops176, ops177, ops178, ops179, ops180, ops181, ops182, ops183, ops184, ops185, ops186, ops187, ops188, ops189, ops190, ops191, ops192, ops193, ops194, ops195, ops196, ops197, ops198, ops199
+
+Runas_Alias GLEXEC_OPSPIL = \
+      pilops301, pilops302, pilops303, pilops304, pilops305, \
+      pilops306, pilops307, pilops308, pilops309, pilops310, \
+      pilops311, pilops312, pilops313, pilops314, pilops315, \
+      pilops316, pilops317, pilops318, pilops319, pilops320
+
+Runas_Alias GLEXEC_OPSPRD = \
+      prdops201, prdops202, prdops203, prdops204, prdops205, \
+      prdops206, prdops207, prdops208, prdops209, prdops210, \
+      prdops211, prdops212, prdops213, prdops214, prdops215, \
+      prdops216, prdops217, prdops218, prdops219, prdops220, \
+      prdops221, prdops222, prdops223, prdops224, prdops225, \
+      prdops226, prdops227, prdops228, prdops229, prdops230, \
+      prdops231, prdops232, prdops233, prdops234, prdops235, \
+      prdops236, prdops237, prdops238, prdops239, prdops240, \
+      prdops241, prdops242, prdops243, prdops244, prdops245, \
+      prdops246, prdops247, prdops248, prdops249, prdops250, \
+      prdops251, prdops252, prdops253, prdops254, prdops255, \
+      prdops256, prdops257, prdops258, prdops259, prdops260, \
+      prdops261, prdops262, prdops263, prdops264, prdops265, \
+      prdops266, prdops267, prdops268, prdops269, prdops270, \
+      prdops271, prdops272, prdops273, prdops274, prdops275, \
+      prdops276, prdops277, prdops278, prdops279, prdops280, \
+      prdops281, prdops282, prdops283, prdops284, prdops285, \
+      prdops286, prdops287, prdops288, prdops289, prdops290, \
+      prdops291, prdops292, prdops293, prdops294, prdops295, \
+      prdops296, prdops297, prdops298, prdops299, prdops300
+
+Runas_Alias GLEXEC_OPSSGM = \
+      sgmops321, sgmops322, sgmops323, sgmops324, sgmops325, \
+      sgmops326, sgmops327, sgmops328, sgmops329, sgmops330, \
+      sgmops331, sgmops332, sgmops333, sgmops334, sgmops335, \
+      sgmops336, sgmops337, sgmops338, sgmops339, sgmops340, \
+      sgmops341, sgmops342, sgmops343, sgmops344, sgmops345, \
+      sgmops346, sgmops347, sgmops348, sgmops349, sgmops350, \
+      sgmops351, sgmops352, sgmops353, sgmops354, sgmops355, \
+      sgmops356, sgmops357, sgmops358, sgmops359, sgmops360, \
+      sgmops361, sgmops362, sgmops363, sgmops364, sgmops365, \
+      sgmops366, sgmops367, sgmops368, sgmops369, sgmops370, \
+      sgmops371, sgmops372, sgmops373, sgmops374, sgmops375, \
+      sgmops376, sgmops377, sgmops378, sgmops379, sgmops380, \
+      sgmops381, sgmops382, sgmops383, sgmops384, sgmops385, \
+      sgmops386, sgmops387, sgmops388, sgmops389, sgmops390, \
+      sgmops391, sgmops392, sgmops393, sgmops394, sgmops395, \
+      sgmops396, sgmops397, sgmops398, sgmops399, sgmops400
+
+Runas_Alias GLEXEC_VFAPIL = \
+      pilvfa301, pilvfa302, pilvfa303, pilvfa304, pilvfa305, \
+      pilvfa306, pilvfa307, pilvfa308, pilvfa309, pilvfa310, \
+      pilvfa311, pilvfa312, pilvfa313, pilvfa314, pilvfa315, \
+      pilvfa316, pilvfa317, pilvfa318, pilvfa319, pilvfa320
+
+Runas_Alias GLEXEC_VFAPRD = \
+      prdvfa201, prdvfa202, prdvfa203, prdvfa204, prdvfa205, \
+      prdvfa206, prdvfa207, prdvfa208, prdvfa209, prdvfa210, \
+      prdvfa211, prdvfa212, prdvfa213, prdvfa214, prdvfa215, \
+      prdvfa216, prdvfa217, prdvfa218, prdvfa219, prdvfa220, \
+      prdvfa221, prdvfa222, prdvfa223, prdvfa224, prdvfa225, \
+      prdvfa226, prdvfa227, prdvfa228, prdvfa229, prdvfa230, \
+      prdvfa231, prdvfa232, prdvfa233, prdvfa234, prdvfa235, \
+      prdvfa236, prdvfa237, prdvfa238, prdvfa239, prdvfa240, \
+      prdvfa241, prdvfa242, prdvfa243, prdvfa244, prdvfa245, \
+      prdvfa246, prdvfa247, prdvfa248, prdvfa249, prdvfa250, \
+      prdvfa251, prdvfa252, prdvfa253, prdvfa254, prdvfa255, \
+      prdvfa256, prdvfa257, prdvfa258, prdvfa259, prdvfa260, \
+      prdvfa261, prdvfa262, prdvfa263, prdvfa264, prdvfa265, \
+      prdvfa266, prdvfa267, prdvfa268, prdvfa269, prdvfa270, \
+      prdvfa271, prdvfa272, prdvfa273, prdvfa274, prdvfa275, \
+      prdvfa276, prdvfa277, prdvfa278, prdvfa279, prdvfa280, \
+      prdvfa281, prdvfa282, prdvfa283, prdvfa284, prdvfa285, \
+      prdvfa286, prdvfa287, prdvfa288, prdvfa289, prdvfa290, \
+      prdvfa291, prdvfa292, prdvfa293, prdvfa294, prdvfa295, \
+      prdvfa296, prdvfa297, prdvfa298, prdvfa299, prdvfa300
+
+Runas_Alias GLEXEC_VFASGM = \
+      sgmvfa321, sgmvfa322, sgmvfa323, sgmvfa324, sgmvfa325, \
+      sgmvfa326, sgmvfa327, sgmvfa328, sgmvfa329, sgmvfa330, \
+      sgmvfa331, sgmvfa332, sgmvfa333, sgmvfa334, sgmvfa335, \
+      sgmvfa336, sgmvfa337, sgmvfa338, sgmvfa339, sgmvfa340, \
+      sgmvfa341, sgmvfa342, sgmvfa343, sgmvfa344, sgmvfa345, \
+      sgmvfa346, sgmvfa347, sgmvfa348, sgmvfa349, sgmvfa350, \
+      sgmvfa351, sgmvfa352, sgmvfa353, sgmvfa354, sgmvfa355, \
+      sgmvfa356, sgmvfa357, sgmvfa358, sgmvfa359, sgmvfa360, \
+      sgmvfa361, sgmvfa362, sgmvfa363, sgmvfa364, sgmvfa365, \
+      sgmvfa366, sgmvfa367, sgmvfa368, sgmvfa369, sgmvfa370, \
+      sgmvfa371, sgmvfa372, sgmvfa373, sgmvfa374, sgmvfa375, \
+      sgmvfa376, sgmvfa377, sgmvfa378, sgmvfa379, sgmvfa380, \
+      sgmvfa381, sgmvfa382, sgmvfa383, sgmvfa384, sgmvfa385, \
+      sgmvfa386, sgmvfa387, sgmvfa388, sgmvfa389, sgmvfa390, \
+      sgmvfa391, sgmvfa392, sgmvfa393, sgmvfa394, sgmvfa395, \
+      sgmvfa396, sgmvfa397, sgmvfa398, sgmvfa399, sgmvfa400
+
+Runas_Alias GLEXEC_VO_FRANCE_ASIA_ORG = \
+      vfa001, vfa002, vfa003, vfa004, vfa005, \
+      vfa006, vfa007, vfa008, vfa009, vfa010, \
+      vfa011, vfa012, vfa013, vfa014, vfa015, \
+      vfa016, vfa017, vfa018, vfa019, vfa020, \
+      vfa021, vfa022, vfa023, vfa024, vfa025, \
+      vfa026, vfa027, vfa028, vfa029, vfa030, \
+      vfa031, vfa032, vfa033, vfa034, vfa035, \
+      vfa036, vfa037, vfa038, vfa039, vfa040, \
+      vfa041, vfa042, vfa043, vfa044, vfa045, vfa046, vfa047, vfa048, vfa049, vfa050, vfa051, vfa052, vfa053, vfa054, vfa055, vfa056, vfa057, vfa058, vfa059, vfa060, vfa061, vfa062, vfa063, vfa064, vfa065, vfa066, vfa067, vfa068, vfa069, vfa070, vfa071, vfa072, vfa073, vfa074, vfa075, vfa076, vfa077, vfa078, vfa079, vfa080, vfa081, vfa082, vfa083, vfa084, vfa085, vfa086, vfa087, vfa088, vfa089, vfa090, vfa091, vfa092, vfa093, vfa094, vfa095, vfa096, vfa097, vfa098, vfa099, vfa100, vfa101, vfa102, vfa103, vfa104, vfa105, vfa106, vfa107, vfa108, vfa109, vfa110, vfa111, vfa112, vfa113, vfa114, vfa115, vfa116, vfa117, vfa118, vfa119, vfa120, vfa121, vfa122, vfa123, vfa124, vfa125, vfa126, vfa127, vfa128, vfa129, vfa130, vfa131, vfa132, vfa133, vfa134, vfa135, vfa136, vfa137, vfa138, vfa139, vfa140, vfa141, vfa142, vfa143, vfa144, vfa145, vfa146, vfa147, vfa148, vfa149, vfa150, vfa151, vfa152, vfa153, vfa154, vfa155, vfa156, vfa157, vfa158, vfa159, vfa160, vfa161, vfa162, vfa163, vfa164, vfa165, vfa166, vfa167, vfa168, vfa169, vfa170, vfa171, vfa172, vfa173, vfa174, vfa175, vfa176, vfa177, vfa178, vfa179, vfa180, vfa181, vfa182, vfa183, vfa184, vfa185, vfa186, vfa187, vfa188, vfa189, vfa190, vfa191, vfa192, vfa193, vfa194, vfa195, vfa196, vfa197, vfa198, vfa199
+
+
+Runas_Alias GLEXEC_ACCOUNTS = \
+      GLEXEC_ATLAS, \
+      GLEXEC_ATLASPIL, \
+      GLEXEC_ATLASPRD, \
+      GLEXEC_ATLASSGM, \
+      GLEXEC_BES, \
+      GLEXEC_BESPIL, \
+      GLEXEC_BESPRD, \
+      GLEXEC_BESSGM, \
+      GLEXEC_BIOMED, \
+      GLEXEC_BIOPIL, \
+      GLEXEC_BIOPRD, \
+      GLEXEC_BIOSGM, \
+      GLEXEC_CMS, \
+      GLEXEC_CMSPIL, \
+      GLEXEC_CMSPRD, \
+      GLEXEC_CMSSGM, \
+      GLEXEC_DTEAM, \
+      GLEXEC_DTEAMPIL, \
+      GLEXEC_DTEAMPRD, \
+      GLEXEC_DTEAMSGM, \
+      GLEXEC_ENMR_EU, \
+      GLEXEC_ENMRPIL, \
+      GLEXEC_ENMRPRD, \
+      GLEXEC_ENMRSGM, \
+      GLEXEC_ESR, \
+      GLEXEC_ESRPIL, \
+      GLEXEC_ESRPRD, \
+      GLEXEC_ESRSGM, \
+      GLEXEC_OPS, \
+      GLEXEC_OPSPIL, \
+      GLEXEC_OPSPRD, \
+      GLEXEC_OPSSGM, \
+      GLEXEC_VFAPIL, \
+      GLEXEC_VFAPRD, \
+      GLEXEC_VFASGM, \
+      GLEXEC_VO_FRANCE_ASIA_ORG
+
+# Cmnd alias specification (for cream)
+
+Cmnd_Alias GLEXEC_CMDS = /bin/echo, /bin/mkdir, /bin/cp, /bin/cat, /usr/bin/groups, /usr/bin/whoami, /bin/dd, /bin/mv, /usr/bin/id, /bin/kill, /usr/libexec/pbs_submit.sh, /usr/libexec/pbs_status.sh, /usr/libexec/pbs_cancel.sh, /usr/libexec/pbs_hold.sh, /usr/libexec/pbs_resume.sh, /usr/bin/glite-cream-copyProxyToSandboxDir.sh, /usr/bin/glite-cream-createsandboxdir, /usr/bin/glite-ce-cream-purge-sandbox, /usr/bin/glite-ce-cream-purge-proxy,  /usr/bin/glite-ce-cream-create-wrapper, /bin/ls 
+
+
+# Defaults specification (for cream)
+
+
+Defaults>GLEXEC_ACCOUNTS !requiretty # Added for cream
+Defaults>GLEXEC_ACCOUNTS env_keep += "BLAHPD_LOCATION BLAHPD_CONFIG_LOCATION"
+
+
+# User privilege specification (for cream)
+tomcat  ALL=(GLEXEC_ACCOUNTS) NOPASSWD: GLEXEC_CMDS  # Added for cream
+

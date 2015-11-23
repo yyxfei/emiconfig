@@ -1,0 +1,5 @@
+for((i=1;i<=199;i++)) do j=`printf "%03d" $i`; echo "78$j:ops$j:78001:ops:ops::" >> users.conf; done
+for((i=201;i<=300;i++)) do j=`printf "%03d" $i`; echo "78$j:prdops$j:78002,78001:opsprd,ops:ops:prd" >> users.conf; done
+for((i=301;i<=320;i++)) do j=`printf "%03d" $i`; echo "78$j:pilops$j:78003,78001:opspil,ops:ops:pilot" >> users.conf; done
+for((i=321;i<=400;i++)) do j=`printf "%03d" $i`; echo "78$j:sgmops$j:78004,78001:opssgm,ops:ops:sgm" >> users.conf; done
+
