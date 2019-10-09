@@ -14,16 +14,16 @@ class emiconfig::dcache (
 
   $dcach_pkg=[
   "dcache",
-  "nfs-utils",
+  "nfs-utils"
   ]
   package{ $dcach_pkg:
     ensure => 'installed',
-    require => Yumrepo ['site'],     
+    require => Yumrepo['site']     
   }
 
   package { "dcap":
     ensure   => 'installed',
-    require => Yumrepo ['site'],
+    require => Yumrepo['site']
   }
   $postgrespkg=[
   "postgresql${postgremajor}${postgreminor}-jdbc",
@@ -48,15 +48,15 @@ class emiconfig::dcache (
     require => Yumrepo['site'],
   }
  
- package {"xfsprogs.x86_64":
-    ensure   => 'installed',
-    require => Yumrepo['site'],
-  }
+ #package {"xfsprogs.x86_64":
+ #   ensure   => 'installed',
+ #   require => Yumrepo['site'],
+ # }
   
-  package {"jdk":
-    ensure   => 'installed',
-    require => Yumrepo['site'],
-  }
+  #package {"jdk":
+  #  ensure   => 'installed',
+  #  require => Yumrepo['site'],
+  #}
   # add file fot JAVA_HOME and package fetch-crl
   service { 'fetch-crl-cron':
     ensure   => true,

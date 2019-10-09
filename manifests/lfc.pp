@@ -9,18 +9,18 @@
 # The standard variables are collected here:
 #
 class emiconfig::lfc {
-  $mysql_root_pass = "asdfasdfasfasfdasfdasdf"
+  $mysql_root_pass = "lcg123"
   $db_user = "dpmmgr"
-  $db_pass = "asdfasdfasfasfdasfdasdf"
+  $db_pass = "lcg123"
   $localdomain = "ihep.ac.cn"
   $volist = ["dteam", "ops", "bes"]
   $debug = false
   
   
-  Class[Mysql::Server] -> Class[Lcgdm::Ns::Service]
-  Class[Lcgdm::Ns::Service] -> Class[Lcgdm::Ns::Client]
+  Class[mysql::server] -> Class[lcgdm::ns::service]
+  Class[lcgdm::ns::service] -> Class[lcgdm::ns::client]
   Lcgdm::Ns::Domain <| |> -> Lcgdm::Ns::Vo <| |>
-  Class[Dmlite::Plugins::Adapter::Install] ~> Class[Dmlite::Dav::Lfc]
+  Class[dmlite::plugins::adapter::install] ~> Class[dmlite::dav::lfc]
   
   #
   # The firewall configuration

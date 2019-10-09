@@ -1,6 +1,0 @@
-$pbsserver cce.ihep.ac.cn
-$restricted cce.ihep.ac.cn
-$logevent 255
-size[fs=/scratch]
-$tmpdir /scratch
-$usecp *.ihep.ac.cn:/var/cream_sandbox /var/cream_sandbox

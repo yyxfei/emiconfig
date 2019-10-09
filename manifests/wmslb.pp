@@ -50,4 +50,3 @@ class emiconfig::wmslb {
   #  timeout      => 3600
   #}
 }
-

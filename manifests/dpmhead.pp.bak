@@ -1,0 +1,118 @@
+class emiconfig::dpmhead {
+# config mysql server 
+  class{"mysql::server":
+  service_enabled => true,
+  root_password   => "lcg123"
+  }
+# config for DPM head node
+# For DPNS and DPM daemon. Also, this command installs the DPNS clients. Don't forget to configure the database connection.
+  class{"lcgdm":
+    dbflavor        => "mysql",       # mysql or oracle
+    dbuser          => "USER",        # database username
+    dbpass          => "PASSWORD",    # database password
+    dbhost          => "HOST",        # database hostname
+    domain          => "DOMAIN",      # you domain, e.g. cern.ch
+    volist          => ["ops", "dteam", "atlas"] # the supported VOs
+  }
+
+#For a head node (or head+disk node) configuration, add
+  class{"dmlite::head":
+    token_password => "lcg123",
+    mysql_username => "dpm",
+    mysql_password => "lcg123",
+  }
+  class{"dmlite::dav":}
+  #class{"dmlite::nfs":}
+  class{"dmlite::srm":}
+  class{"dmlite::gridftp":
+     dpmhost => "ccsrm.ihep.ac.cn"
+  }
+  class{"lcgdm::rfio":
+     dpmhost => "ccsrm.ihep.ac.cn"
+  }
+
+# bdii installation and configuration with default values  
+  include('bdii')
+  class{"lcgdm::bdii::dpm":
+    sitename => "BEIJING-LCG2",
+    vos => ["ops", "dteam", "atlas"],
+  }
+
+#Shift Config
+  lcgdm::shift::trust_value{
+    "DPM TRUST":
+      component => "DPM",
+      host      => "dpmds01.ihep.ac.cn dpmds02.ihep.ac.cn";
+    "DPNS TRUST":
+      component => "DPNS",
+      host      => "dpmds01.ihep.ac.cn dpmds02.ihep.ac.cn";
+    "RFIO TRUST":
+      component => "RFIOD",
+      host      => "dpmds01.ihep.ac.cn dpmds02.ihep.ac.cn",
+      all       => true
+  }
+
+  lcgdm::shift::protocol{"PROTOCOLS":
+    component => "DPM",
+    proto     => "rfio gsiftp http https xroot"
+  }
+
+# Create the gridmapfile
+  $groupmap = {
+    "vomss://voms.cern.ch:8443/voms/atlas?/atlas/"      => "atlas",
+    "vomss://voms.cern.ch:8443/voms/cms?/cms/"          => "cms",
+    "vomss://voms.hellasgrid.gr:8443/voms/dteam?/dteam" => "dteam"
+  }
+  lcgdm::mkgridmap::file {"lcgdm-mkgridmap":
+    configfile   => "/etc/lcgdm-mkgridmap.conf",
+    mapfile      => "/etc/lcgdm-mapfile",
+    localmapfile => "/etc/lcgdm-mapfile-local",
+    logfile      => "/var/log/lcgdm-mkgridmap.log",
+    groupmap     => $groupmap,
+    localmap     => {}
+  }
+
+
+
+  lcgdm::dpm::pool{"atlas":
+   def_filesize => "100M"
+  }
+  
+  lcgdm::dpm::pool{"opsdteam":
+   def_filesize => "100M"
+  }
+  
+  # config filesystem
+  lcgdm::dpm::filesystem{"dpmds01.ihep.ac.cn:/storage/disk011":
+    ensure  => present,
+    pool    => "atlas",
+    server  => "dpmds01.ihep.ac.cn",
+    fs      => "/storage/disk011"
+  }
+  
+  lcgdm::dpm::filesystem{"dpmds01.ihep.ac.cn:/storage/disk012":
+    ensure  => present,
+    pool    => "atlas",
+    server  => "dpmds01.ihep.ac.cn",
+    fs      => "/storage/disk012"
+  }
+  lcgdm::dpm::filesystem{"dpmds01.ihep.ac.cn:/storage/disk013":
+    ensure  => present,
+    pool    => "atlas",
+    server  => "dpmds01.ihep.ac.cn",
+    fs      => "/storage/disk013"
+  }
+  lcgdm::dpm::filesystem{"dpmds01.ihep.ac.cn:/storage/disk014":
+    ensure  => present,
+    pool    => "atlas",
+    server  => "dpmds01.ihep.ac.cn",
+    fs      => "/storage/disk014"
+  }
+  lcgdm::dpm::filesystem{"dpmds01.ihep.ac.cn:/storage/disk01d1p1":
+    ensure  => present,
+    pool    => "opsdteam",
+    server  => "dpmds01.ihep.ac.cn",
+    fs      => "/storage/disk01d1p1"
+  }
+
+}

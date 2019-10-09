@@ -1,3 +1,0 @@
-exp_soft       -fstype=nfs,soft,rsize=32768,wsize=32768,soft,intr,retrans=20,timeo=15,nfsvers=3,nosuid bjlcg2.ihep.ac.cn:/opt/exp_soft
-cream_sandbox       -fstype=nfs,soft,rsize=32768,wsize=32768,soft,intr,retrans=20,timeo=15,vers=4,nosuid cce.ihep.ac.cn:/var/cream_sandbox
-cc      -fstype=nfs,soft,rsize=32768,wsize=32768,soft,intr,retrans=20,timeo=15,nfsvers=3,nosuid 192.168.51.143:/home/cc

@@ -1,15 +1,15 @@
 class emiconfig::env {
 
-  file{"/etc/profile.d/local_env.sh":
-    mode         =>  '755',
+  file{"/etc/profile.d/grid.sh":
+    mode         =>  '0755',
     owner        =>  'root',
     group        =>  'root',
-    source       =>  "puppet:///modules/emiconfig/local_env.sh",
+    source       =>  "puppet:///modules/emiconfig/grid.sh",
   }
-  file{"/etc/profile.d/local_env.csh":
-    mode         =>  '755',
+  file{"/etc/profile.d/grid.csh":
+    mode         =>  '0755',
     owner        =>  'root',
     group        =>  'root',
-    source       =>  "puppet:///modules/emiconfig/local_env.csh",
+    source       =>  "puppet:///modules/emiconfig/grid.csh",
   }
 }
