@@ -4,7 +4,7 @@ class emiconfig::argus7 {
   }
   class {'argus_server': 
   argus_host_dn          => '/C=CN/O=HEP/O=IHEP/OU=CC/CN=dpmds05.ihep.ac.cn',
-  admin_password         => 'lcg123',
+  admin_password         => '*********',
   argus_host             => 'argus.ihep.ac.cn',
   packages               => ['java-1.8.0-openjdk', 'argus-authz', 'bdii', 'glite-info-provider-service'],
   pap_poll_interval      => 3600,
